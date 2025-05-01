@@ -1,0 +1,134 @@
+<div class="main-content" [ngClass]="{'banner-visible': isBannerVisible}">
+
+  <!-- Section Slider Principal -->
+  <section class="hero-slider">
+    <div *ngFor="let banner of banners" class="hero-slide">
+      <img [src]="banner.imageUrl" alt="{{banner.title}}">
+      <div class="hero-text">
+        <h2>{{ banner.title }}</h2>
+        <p>{{ banner.description }}</p>
+        <p>{{ banner.ctaLink }}</p>
+        <a [href]="banner.link || '#'" class="cta-btn">Profitez de l'offre maintenant</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Événements -->
+  <section class="events-section">
+    <h2>✨ Nouveaux Événements</h2>
+    <p class="section-description">
+      Plongez au cœur de nos événements exclusifs ! Rencontrez des experts, développez votre réseau et créez des souvenirs inoubliables avec notre communauté dynamique.
+    </p>
+    <div class="events-grid">
+      <div *ngFor="let event of events" class="event-card">
+        <img [src]="event.imageUrl" alt="{{ event.title }}">
+        <h3>{{ event.title }}</h3>
+        <p>{{ event.description }}</p>
+      </div>
+    </div>
+    <a href="/evenements" class="cta-btn">Voir tous les événements</a>
+  </section>
+
+  <!-- Section Publicité de l'Association -->
+  <section class="association-promo-section">
+    <h2>❤️ Découvrez Notre Association</h2>
+    <p class="section-description">
+      Association pour la Promotion de la Culture et du Développement Durable
+
+      Notre association œuvre pour préserver notre patrimoine culturel et promouvoir un développement durable. Nous créons des initiatives éducatives, écologiques et sociales pour renforcer les communautés locales. Rejoignez-nous pour un avenir où la culture et l'environnement sont au cœur du progrès. Ensemble, faisons la différence !
+    </p>
+    <div class="association-banner">
+      <img src="/assets/images/logo.jpg" alt="Notre Association">
+    </div>
+    <a href="/association" class="cta-btn">En savoir plus sur notre mission</a>
+  </section>
+
+  <!-- Section Publicités -->
+  <section class="ads-section">
+    <h2>🔔 Publicités Partenaires</h2>
+    <p class="section-description">
+      Nos partenaires de confiance vous proposent des offres exclusives. Ne manquez pas l'opportunité de bénéficier de leurs services et produits de qualité !
+    </p>
+    <div class="ads-carousel">
+      <div *ngFor="let ad of ads" class="ad-item">
+        <img [src]="ad.imageUrl" alt="Publicité">
+      </div>
+    </div>
+    <a href="/partenaires" class="cta-btn">Découvrez nos partenaires</a>
+  </section>
+
+<!-- Section Vidéos -->
+<section class="videos-section">
+  <h2>🎥 Vidéos à la Une</h2>
+  <p class="section-description">
+    Plongez dans notre univers à travers des vidéos inspirantes, des reportages captivants et des témoignages poignants. Chaque image raconte une histoire unique !
+  </p>
+
+  <div class="videos-grid">
+    <div *ngFor="let video of videos" class="video-item">
+      <video 
+        [src]="'http://localhost:3000/uploads/' + video.video" 
+        controls 
+        [poster]="video.posterUrl">
+      </video>
+      <h3>{{ video.title }}</h3>
+      <p>{{ video.description }}</p>
+    </div>
+  </div>
+
+  <a href="/videos" class="cta-btn">Voir toutes les vidéos</a>
+</section>
+
+
+  <!-- Section Produits -->
+  <section class="products-section">
+    <h2>🛍️ Produits / Services recommandés</h2>
+    <p class="section-description">
+      Découvrez notre sélection de produits et services choisis pour leur qualité exceptionnelle. Profitez d'avantages exclusifs réservés à nos membres.
+    </p>
+    <div class="products-grid">
+      <div *ngFor="let product of products" class="product-card">
+        <img [src]="product.imageUrl" alt="{{ product.name }}">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+        <a [href]="'/produits/' + product.slug" class="cta-btn">Voir plus</a>
+      </div>
+    </div>
+    <a href="/produits" class="cta-btn">Voir tous les produits</a>
+  </section>
+
+  <!-- Section Témoignages -->
+  <section class="testimonials-section">
+    <h2>💬 Ce que disent nos clients</h2>
+    <p class="section-description">
+      Nos membres sont notre meilleure publicité. Découvrez leurs témoignages sincères et inspirants sur leurs expériences avec nous !
+    </p>
+    <div class="testimonials-grid">
+      <div *ngFor="let testimonial of testimonials" class="testimonial">
+        <img [src]="testimonial.imageUrl" alt="{{ testimonial.name }}" class="testimonial-photo">
+        <p>"{{ testimonial.testimonialText }}"</p>
+        <strong>- {{ testimonial.author }}</strong>
+      </div>
+    </div>
+    <a href="/temoignages" class="cta-btn">Voir tous les témoignages</a>
+  </section>
+
+  <!-- Section Actualités -->
+  <section class="news-section">
+    <h2>📰 Dernières Actualités</h2>
+    <p class="section-description">
+      Restez informé des dernières tendances, projets et réussites de notre communauté. Notre actualité, c'est aussi votre histoire !
+    </p>
+    <div class="news-grid">
+      <div *ngFor="let newsItem of news" class="news-card">
+        <img [src]="newsItem.imageUrl" alt="{{ newsItem.title }}">
+        <h3>{{ newsItem.title }}</h3>
+        <p>{{ newsItem.content }}</p>
+        <p><em>{{ newsItem.date }}</em></p>
+        <a [href]="newsItem.link" class="cta-btn">Lire la suite</a>
+      </div>
+    </div>
+    <a href="/actualites" class="cta-btn">Voir toutes les actualités</a>
+  </section>
+
+</div>

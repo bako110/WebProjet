@@ -1,0 +1,143 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full-screen background and center alignment */
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #28313b, #485461);
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Styling for the main error box */
+.not-found {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 50px 60px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 100%;
+  color: #fff;
+}
+
+/* Title styling */
+.not-found-title {
+  font-size: 45px;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Error message styling */
+.not-found-message {
+  font-size: 18px;
+  color: #b0b0b0;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+/* Back button styling */
+.not-found .back-btn {
+  font-size: 18px;
+  color: #fff;
+  background-color: #FF4081;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+.not-found .back-btn:hover {
+  background-color: #F50057;
+  transform: translateY(-5px);
+}
+
+.not-found .back-btn:focus {
+  outline: none;
+}
+
+/* Futuristic animation for the error icon */
+.animation-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.error-icon {
+  font-size: 100px;
+  color: #FF4081;
+  animation: pulse 1.5s infinite ease-in-out;
+  margin-right: 20px;
+}
+
+.error-msg p {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+  margin: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Suggestions list styling */
+.suggestions {
+  margin-top: 30px;
+}
+
+.suggestions p {
+  font-size: 16px;
+  color: #aaa;
+}
+
+.suggestions ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.suggestions ul li {
+  margin-bottom: 10px;
+}
+
+.suggestions ul li a {
+  color: #FF4081;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.suggestions ul li a:hover {
+  color: #F50057;
+}
+
+/* Accessibility improvements */
+a:focus {
+  outline: 3px solid #FF4081;
+  outline-offset: 4px;
+}

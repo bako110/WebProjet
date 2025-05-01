@@ -1,0 +1,17 @@
+<app-header></app-header>
+
+<div class="container">
+  <app-banner *ngIf="isBannerVisible" class="banner" [ngClass]="{'banner-visible': isBannerVisible}"></app-banner>
+  <!-- <app-promotion-banner></app-promotion-banner> -->
+  <div class="content-accueil" [ngClass]="{'content-accueil-expanded': isBannerVisible}">
+    <app-contenu-accueil></app-contenu-accueil>
+  </div>
+</div>
+
+
+<app-footer></app-footer>
+
+<div class="support-button">
+  <button title="Support en ligne">💬</button>
+</div>
+

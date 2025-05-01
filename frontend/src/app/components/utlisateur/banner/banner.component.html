@@ -1,0 +1,41 @@
+<!-- banner.component.html -->
+<div class="left-banner" *ngIf="isVisible" style="height: 1000px; overflow-y: auto;">
+    <ul>
+      <li><a routerLink="/evenements">📅 Événements</a></li>
+
+      <li><a routerLink="/testimonials">💬 Témoignages</a></li>
+      <li><a routerLink="/partenaires">🤝 Partenaires</a></li>
+      <li><a routerLink="/media">🎥 Médias</a></li>
+  
+      <li class="dropdown" [class.open]="isCategoriesOpen">
+        <span (click)="toggleCategories()">📂 Catégories</span>
+        <ul class="dropdown-menu">
+          <li><a routerLink="/categories/masques">🎭 Masques</a></li>
+          <li><a routerLink="/categories/poterie">🏺 Poterie</a></li>
+          <li><a routerLink="/categories/textiles">🧵 Textiles</a></li>
+          <li><a routerLink="/categories/instruments">🥁 Instruments</a></li>
+          <li><a routerLink="/categories/sculpture">🗿 Sculpture</a></li>
+          <li><a routerLink="/categories/peinture">🎨 Peinture</a></li>
+          <li><a routerLink="/categories/photographie">📸 Photographie</a></li>
+          <li><a routerLink="/categories/cinema">🎬 Cinéma</a></li>
+          <li><a routerLink="/categories/livres">📚 Livres</a></li>
+          <li><a routerLink="/categories/arts-visuels">🖼️ Arts visuels</a></li>
+          <li><a routerLink="/categories/digital-art">💻 Art numérique</a></li>
+          <li><a routerLink="/categories/design">🎨 Design</a></li>
+          <li><a routerLink="/categories/fashion">👗 Mode</a></li>
+          <li><a routerLink="/categories/architecture">🏛️ Architecture</a></li>
+        </ul>
+      </li>
+  
+      <li><a routerLink="/news">📰 Actualités</a></li>
+      <li><a routerLink="/workshops">🔧 Ateliers</a></li>
+      <li><a routerLink="/competitions">🏆 Compétitions</a></li>
+      <li><a routerLink="/artists">🎤 Artistes</a></li>
+      <li><a routerLink="/map">🗺️ Carte</a></li>
+      <li><a routerLink="/store">🛒 Boutique</a></li>
+      <li><a routerLink="/blog">📝 Blog</a></li>
+      <!-- Autres liens -->
+      <li><a routerLink="/contact">📨 Contact</a></li>
+    </ul>
+  </div>
+  

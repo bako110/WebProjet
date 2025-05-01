@@ -1,0 +1,117 @@
+<div class="admin-dashboard">
+  <h1>🎛️ Tableau de Bord Administrateur</h1>
+
+  <div *ngFor="let section of sections" class="card">
+    <div class="card-header" (click)="expandSection(section.key, $event)">
+      <h2>{{ section.title }}</h2>
+      <button type="button" (click)="toggleForm(section.key, $event)">➕ Ajouter</button>
+    </div>
+
+    <form *ngIf="isFormVisible(section.key)" (ngSubmit)="submitForm(section.key)" class="card-form">
+      <ng-container [ngSwitch]="section.key">
+
+        <!-- Bannière -->
+        <ng-container *ngSwitchCase="'banner'">
+          <label for="banner-title">Titre</label>
+          <input id="banner-title" type="text" [(ngModel)]="banner.title" name="bannerTitle" required>
+
+          <label for="banner-image">Image</label>
+          <input id="banner-image" type="file" (change)="onFileChange($event, 'bannerImage')" required>
+
+          <label for="banner-description">Description</label>
+          <textarea id="banner-description" [(ngModel)]="banner.description" name="bannerDescription"></textarea>
+
+          <label for="banner-ctaLink">Lien CTA</label>
+          <input id="banner-ctaLink" type="text" [(ngModel)]="banner.ctaLink" name="bannerCtaLink">
+        </ng-container>
+
+        <!-- Événement -->
+        <ng-container *ngSwitchCase="'event'">
+          <label for="event-title">Titre de l'Événement</label>
+          <input id="event-title" type="text" [(ngModel)]="event.title" name="eventTitle" required>
+
+          <label for="event-image">Image</label>
+          <input id="event-image" type="file" (change)="onFileChange($event, 'eventImage')" required>
+
+          <label for="event-description">Description</label>
+          <textarea id="event-description" [(ngModel)]="event.description" name="eventDescription"></textarea>
+
+          <label for="event-date">Date</label>
+          <input id="event-date" type="date" [(ngModel)]="event.date" name="eventDate" required>
+        </ng-container>
+
+        <!-- Publicité -->
+        <ng-container *ngSwitchCase="'ad'">
+          <label for="ad-title">Titre de la Publicité</label>
+          <input id="ad-title" type="text" [(ngModel)]="ad.title" name="adTitle" required>
+
+          <label for="ad-image">Image</label>
+          <input id="ad-image" type="file" (change)="onFileChange($event, 'adImage')" required>
+
+          <label for="ad-description">Description</label>
+          <textarea id="ad-description" [(ngModel)]="ad.description" name="adDescription"></textarea>
+
+          <label for="ad-link">Lien</label>
+          <input id="ad-link" type="url" [(ngModel)]="ad.link" name="adLink">
+        </ng-container>
+
+<!-- Vidéo -->
+<ng-container *ngSwitchCase="'video'">
+  <label for="video-title">Titre de la Vidéo</label>
+  <input id="video-title" type="text" [(ngModel)]="video.title" name="videoTitle" required>
+  <label for="video-description">Description</label>
+  <textarea id="video-description" [(ngModel)]="video.description" name="videoDescription"></textarea>
+
+  <label for="video-file">Fichier Vidéo</label>
+  <input id="video-file" type="file" (change)="onFileChange($event, 'videoFile')" accept="video/*" required>
+</ng-container>
+
+
+        <!-- Produit -->
+        <ng-container *ngSwitchCase="'product'">
+          <label for="product-name">Nom du Produit</label>
+          <input id="product-name" type="text" [(ngModel)]="product.name" name="productName" required>
+
+          <label for="product-image">Image</label>
+          <input id="product-image" type="file" (change)="onFileChange($event, 'productImage')" required>
+
+          <label for="product-price">Prix</label>
+          <input id="product-price" type="number" [(ngModel)]="product.price" name="productPrice" required>
+
+          <label for="product-description">Description</label>
+          <textarea id="product-description" [(ngModel)]="product.description" name="productDescription"></textarea>
+        </ng-container>
+
+        <!-- Témoignage -->
+        <ng-container *ngSwitchCase="'testimonial'">
+          <label for="testimonial-author">Auteur</label>
+          <input id="testimonial-author" type="text" [(ngModel)]="testimonial.author" name="testimonialAuthor" required>
+
+          <label for="testimonial-image">Image</label>
+          <input id="testimonial-image" type="file" (change)="onFileChange($event, 'testimonialImage')" required>
+
+          <label for="testimonial-text">Témoignage</label>
+          <textarea id="testimonial-text" [(ngModel)]="testimonial.testimonialText" name="testimonialText"></textarea>
+        </ng-container>
+
+        <!-- Actualité -->
+        <ng-container *ngSwitchCase="'news'">
+          <label for="news-title">Titre de l'Actualité</label>
+          <input id="news-title" type="text" [(ngModel)]="news.title" name="newsTitle" required>
+
+          <label for="news-content">Contenu</label>
+          <textarea id="news-content" [(ngModel)]="news.content" name="newsContent"></textarea>
+
+          <label for="news-date">Date</label>
+          <input id="news-date" type="date" [(ngModel)]="news.date" name="newsDate" required>
+
+          <label for="news-image">Image</label>
+          <input id="news-image" type="file" (change)="onFileChange($event, 'newsImage')" required>
+        </ng-container>
+
+      </ng-container>
+
+      <button type="submit">✅ Ajouter {{ section.title }}</button>
+    </form>
+  </div>
+</div>

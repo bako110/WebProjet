@@ -1,0 +1,27 @@
+<div class="not-found-container">
+  <div class="not-found">
+    <h1 class="not-found-title">Page non trouvée</h1>
+    <p class="not-found-message">Désolé, la page que vous cherchez n'existe pas. Il se peut que vous ayez fait une erreur de frappe ou que la page ait été déplacée.</p>
+    <a routerLink="/utilisateur" class="back-btn">Retour à l'accueil</a>
+    
+    <!-- Nouvelle section pour une touche futuriste -->
+    <div class="animation-wrapper">
+      <div class="error-icon">
+        <i class="fas fa-exclamation-circle"></i>
+      </div>
+      <div class="error-msg">
+        <p>Erreur 404 - Page introuvable</p>
+      </div>
+    </div>
+
+    <!-- Ajout d'une section avec des liens vers d'autres pages -->
+    <div class="suggestions">
+      <p>Vous pouvez essayer les pages suivantes :</p>
+      <ul>
+        <li><a routerLink="/services">Nos services</a></li>
+        <li><a routerLink="/contact">Contactez-nous</a></li>
+        <li><a routerLink="/about">À propos</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

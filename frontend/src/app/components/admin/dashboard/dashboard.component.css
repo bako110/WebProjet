@@ -1,0 +1,130 @@
+.admin-dashboard {
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);  /* Ajout du dégradé */
+
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #fff; /* Changement de la couleur du texte pour qu'il soit visible sur le fond sombre */
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.01);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card-header h2 {
+    font-size: 1.4rem;
+    color: #444;
+}
+
+.card-header button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.card-header button:hover {
+    background-color: #0056b3;
+}
+
+.card-form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    animation: fadeInUp 1s ease-out;  /* Animation pour la carte de formulaire */
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+input[type="text"],
+input[type="file"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajout d'animation sur focus */
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    transform: scale(1.02);  /* Effet de zoom au focus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.7);  /* Ombre bleu claire au focus */
+    outline: none; /* Retirer le contour par défaut */
+}
+
+button[type="submit"] {
+    align-self: flex-end;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+    transform: translateY(-3px);  /* Légère élévation au survol */
+}
+
+/* Animation de disparition / réapparition des champs */
+input[type="text"],
+input[type="file"],
+input[type="date"],
+textarea {
+    animation: fadeInUpFields 0.5s ease-out;
+}
+
+@keyframes fadeInUpFields {
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,154 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    height: 70px;
+  }
+  
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .logo-img {
+    width: 100px; /* Taille réduite pour plus de proportion */
+    height: 100px;
+    margin-bottom: 0.8rem;
+    border-radius: 50%;
+    border: 3px solid #ffd700;
+    background-color: white;
+    padding: 0.3rem;
+    position: relative;
+    bottom: 40px;
+    left:-670px ;
+  }
+
+  .mat-icon {
+  font-size: 24px;
+  color: #111111;  /* Changez la couleur de l'icône selon vos préférences */
+}
+
+  .title {
+    font-size: 2.5rem; /* Taille légèrement réduite pour un meilleur espacement */
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1px;
+    position: relative;
+    bottom: 150px;
+    position: relative;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    font-style: italic;
+    opacity: 0.85;
+    max-width: 600px;
+    margin-top: 0.4rem;
+    position: relative;
+    top: -150px; /* Ajustement léger pour un meilleur alignement */
+  }
+  
+  /* Menu de navigation */
+  .nav-menu {
+    display: flex;
+    flex-direction: row; /* Aligner les éléments du menu sur une seule ligne */
+    justify-content: center; /* Centrer les éléments horizontalement */
+    margin-top: 2rem; /* Espacement au-dessus du menu */
+    gap: 2rem; /* Espacement plus large entre les éléments */
+    flex-wrap: nowrap; /* Ne pas autoriser le retour à la ligne */
+    position: relative;
+    bottom: 200px;
+    left: 100px;
+  }
+  
+  .nav-menu a {
+    padding: 0.8rem 1.5rem;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-size: 1.1rem; /* Taille légèrement plus grande pour meilleure lisibilité */
+  }
+  
+  .nav-menu a:hover {
+    background-color: #ffd700;
+    color: #1e3c72;
+    border-color: #ffd700;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+  }
+  
+  /* Dropdown Menu Styles */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2c5364;
+    min-width: 160px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    top: 40px;
+  }
+  
+  .dropdown-content a {
+    color: #fff;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ffd700;
+    color: #1e3c72;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Call to Action Button */
+  .cta-btn {
+    padding: 0.8rem 1.5rem;
+    background-color: #ffd700;
+    color: #1e3c72;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .cta-btn:hover {
+    background-color: #ffcc00;
+    transform: translateY(-2px);
+  }
+  
+  /* Search Button */
+  .search-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.4rem;
+    margin-left: 1rem; /* Plus d'espace entre le bouton de recherche et le reste */
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .search-btn:hover {
+    transform: scale(1.2);
+  }
+  

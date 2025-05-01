@@ -1,0 +1,26 @@
+/* CSS pour le contenu et le banner */
+.container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .banner {
+    width: 0;
+    transition: width 0.3s ease;
+    /* Autres styles de la bannière */
+  }
+  
+  .banner-visible {
+    width: 15%;  /* Le menu occupe 15% de la largeur */
+  }
+  
+  .content-accueil {
+    width: 100%;
+    transition: width 0.3s ease;
+    /* Autres styles du contenu principal */
+  }
+  
+  .content-accueil-expanded {
+    width: 85%;  /* Le contenu occupe 85% de la largeur */
+  }
+  

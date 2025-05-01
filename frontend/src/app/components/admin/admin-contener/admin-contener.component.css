@@ -1,0 +1,13 @@
+.admin-layout {
+    display: flex;
+    height: 100vh; /* pleine hauteur de l'écran */
+    width: 100%;
+  }
+   
+  .main-content {
+    width: 85%;
+    padding: 1rem;
+    position: relative;
+    left: 150px;
+  }
+  
