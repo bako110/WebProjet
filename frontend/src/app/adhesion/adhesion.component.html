@@ -1,1 +1,90 @@
-<p>adhesion works!</p>
+<div class="adhesion-container">
+    <section class="header">
+      <h1>🌍 Rejoignez notre communauté</h1>
+      <p>Unissons nos forces pour préserver notre culture et bâtir un avenir durable</p>
+      <button (click)="scrollToForm()">Je m'engage</button>
+    </section>
+  
+    <section class="about">
+      <h2>🌿 À propos de nous</h2>
+      <p>
+        L’<strong>Association pour la Promotion de la Culture et du Développement Durable</strong> œuvre à préserver notre patrimoine culturel tout en
+        soutenant un développement durable à travers des initiatives éducatives, écologiques et sociales.
+      </p>
+      <div class="stats">
+        <div>
+          <h3>150+</h3>
+          <p>Actions menées</p>
+        </div>
+        <div>
+          <h3>1,000+</h3>
+          <p>Membres engagés</p>
+        </div>
+        <div>
+          <h3>30+</h3>
+          <p>Communes impactées</p>
+        </div>
+      </div>
+    </section>
+  
+    <section class="benefits">
+      <h2>✨ Pourquoi adhérer ?</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>📚 Éducation</h3>
+          <p>Participez à des programmes éducatifs innovants.</p>
+        </div>
+        <div class="card">
+          <h3>🌱 Écologie</h3>
+          <p>Contribuez à la protection de l’environnement local.</p>
+        </div>
+        <div class="card">
+          <h3>🤝 Communauté</h3>
+          <p>Rejoignez un réseau solidaire et actif.</p>
+        </div>
+      </div>
+    </section>
+  
+    <section class="testimonial">
+      <h2>💬 Ils nous ont rejoints</h2>
+      <blockquote>
+        “Depuis que j’ai adhéré, j’ai participé à des projets incroyables et j’ai vraiment l’impression de faire une différence.”
+        <br /><span>— Aïssata, bénévole depuis 2023</span>
+      </blockquote>
+    </section>
+  
+    <section class="form-section" id="adhesionFormAnchor">
+      <h2>📩 Formulaire d'adhésion</h2>
+      <form (ngSubmit)="onSubmit()" #adhesionForm="ngForm">
+        <div class="input-group">
+          <input type="text" name="nom" required ngModel />
+          <label>Nom complet</label>
+        </div>
+        <div class="input-group">
+          <input type="email" name="email" required ngModel />
+          <label>Email</label>
+        </div>
+        <div class="input-group">
+          <input type="tel" name="telephone" ngModel />
+          <label>Téléphone</label>
+        </div>
+        <div class="input-group">
+          <textarea name="motivation" required ngModel></textarea>
+          <label>Pourquoi voulez-vous adhérer ?</label>
+        </div>
+        <button type="submit">Envoyer ma demande</button>
+      </form>
+    </section>
+  </div>
+      <!-- Footer Section -->
+      <footer class="footer">
+        <div class="footer-content">
+          <p>&copy; <span id="year"></span> Association pour la Promotion de la Culture et du Développement Durable. Tous droits réservés.</p>
+          <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a> | 
+            <a href="https://twitter.com" target="_blank">Twitter</a> | 
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+          </div>
+        </div>
+      </footer>
+  

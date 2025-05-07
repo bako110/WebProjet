@@ -1,1 +1,105 @@
-<p>partenaires works!</p>
+<div class="partners-container">
+    <!-- Introduction -->
+    <section class="intro">
+      <h1>Nos Partenaires</h1>
+      <p>Nous sommes fiers de collaborer avec des partenaires qui partagent nos valeurs et notre vision pour un avenir durable et prospère.</p>
+    </section>
+  
+    <!-- Liste des partenaires -->
+    <section class="partner-list">
+      <h2>Nos Partenaires Clés</h2>
+      <div class="partners">
+        <div class="partner-card" *ngFor="let partner of partners">
+          <img [src]="partner.logo" [alt]="partner.name">
+          <h3>{{ partner.name }}</h3>
+          <p>{{ partner.description }}</p>
+          <a [href]="partner.website" target="_blank">En savoir plus</a>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Avantages du partenariat -->
+    <section class="partnership-benefits">
+      <h2>Pourquoi Devenir Partenaire ?</h2>
+      <ul>
+        <li><strong>Visibilité accrue</strong> : Augmentez votre visibilité à travers nos événements et nos réseaux.</li>
+        <li><strong>Impact positif</strong> : Participez à des projets ayant un impact réel.</li>
+        <li><strong>Opportunités de réseau</strong> : Connectez-vous avec d'autres entreprises et acteurs clés.</li>
+        <li><strong>Responsabilité sociale</strong> : Montrez votre engagement envers le développement durable.</li>
+      </ul>
+    </section>
+  
+    <!-- Études de Cas -->
+    <section class="case-studies">
+      <h2>Études de Cas</h2>
+      <div class="case-study">
+        <h3>Partenariat avec [Nom de l'entreprise]</h3>
+        <p>Découvrez comment notre partenariat a contribué à [objectif spécifique], renforçant la collaboration pour des résultats durables.</p>
+        <a href="#" target="_blank">Lire l'étude complète</a>
+      </div>
+      <div class="case-study">
+        <h3>Partenariat avec [Nom de l'entreprise]</h3>
+        <p>Ensemble, nous avons lancé [projet spécifique], contribuant à [impact mesurable].</p>
+        <a href="#" target="_blank">Lire l'étude complète</a>
+      </div>
+    </section>
+  
+    <!-- Ressources pour Partenaires -->
+    <section class="partner-resources">
+      <h2>Ressources pour nos Partenaires</h2>
+      <ul>
+        <li><a href="#" target="_blank">Guides de partenariat</a></li>
+        <li><a href="#" target="_blank">Outils marketing</a></li>
+        <li><a href="#" target="_blank">FAQ des partenaires</a></li>
+        <li><a href="#" target="_blank">Accès aux événements privés</a></li>
+      </ul>
+    </section>
+  
+    <!-- Appel à l'action -->
+    <section class="cta">
+      <h2>Prêt à Devenir Partenaire ?</h2>
+      <p>Contactez-nous pour en savoir plus sur les opportunités de partenariat et comment nous pouvons collaborer pour créer un impact.</p>
+      <button (click)="goToContact()">Devenir Partenaire</button>
+    </section>
+  
+    <!-- Témoignages -->
+    <section class="partner-testimonials">
+      <h2>Ce Que Disent Nos Partenaires</h2>
+      <div *ngFor="let testimonial of testimonials" class="testimonial">
+        <blockquote>{{ testimonial.message }}</blockquote>
+        <footer>- {{ testimonial.name }}</footer>
+      </div>
+    </section>
+  
+    <!-- Formulaire de Contact -->
+    <section class="partner-contact">
+      <h2>Contactez-nous pour devenir partenaire</h2>
+      <form (ngSubmit)="onSubmit()" #partnerForm="ngForm">
+        <div class="input-group">
+          <label for="company-name">Nom de l'entreprise</label>
+          <input type="text" id="company-name" name="companyName" ngModel required>
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" ngModel required>
+        </div>
+        <div class="input-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" ngModel rows="4" required></textarea>
+        </div>
+        <button type="submit" [disabled]="!partnerForm.valid">Envoyer</button>
+      </form>
+    </section>
+  
+    <!-- Mentions légales -->
+    <section class="legal-notice">
+      <h2>Mentions légales</h2>
+      <p>Veuillez consulter nos <a href="#" target="_blank">Mentions légales</a> pour plus d'informations sur nos termes et conditions, ainsi que sur notre politique de confidentialité.</p>
+    </section>
+  
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 [Nom de votre entreprise]. Tous droits réservés.</p>
+    </footer>
+  </div>
+  

@@ -22,6 +22,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { UserConditionComponent } from './user-condition/user-condition.component';
 import { AdhesionComponent } from './adhesion/adhesion.component';  // AdminModule importé
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { AdhesionComponent } from './adhesion/adhesion.component';  // AdminModu
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     UtilisateurModule,  // Module utilisateur importé
     AdminModule         // Module admin importé, contenant AdminContenerComponent
   ],

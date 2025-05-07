@@ -1,0 +1,112 @@
+:root {
+    --main-transition: all 0.5s ease-in-out;
+    --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* PARTNERS CONTAINER */
+  .partners-container {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    padding: 2rem;
+    animation: fadeIn 1s ease-in-out;
+    transition: background-color 1s ease-in-out;
+  }
+  
+  /* TEXTS */
+  h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    animation: slideDown 1s ease;
+  }
+  
+  p, li, blockquote {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* PARTNER LISTING */
+  .partner-list .partners {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  /* CARD */
+  .partner-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+    animation: popIn 0.6s ease-in-out;
+  }
+  
+  .partner-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .partner-card img {
+    max-width: 100px;
+    margin-bottom: 1rem;
+    animation: fadeIn 0.8s ease;
+  }
+  
+  .partner-card a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #0066cc;
+    text-decoration: none;
+    transition: var(--main-transition);
+  }
+  
+  .partner-card a:hover {
+    color: #003366;
+    text-decoration: underline;
+  }
+  
+  /* ADDITIONAL SECTIONS */
+  .case-study, .testimonial, .input-group, .cta, .partner-resources {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #ffffffd1;
+    border-radius: 0.75rem;
+    box-shadow: var(--card-shadow);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* BUTTON */
+  button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: var(--main-transition);
+  }
+  
+  button:hover {
+    background-color: #004c99;
+    transform: scale(1.05);
+  }
+  
+  /* ANIMATIONS */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes popIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  @keyframes slideDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
