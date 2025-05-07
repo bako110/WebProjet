@@ -18,6 +18,11 @@ yarn-error.log
 
 # === Fichiers de configuration sensibles ===
 .env
+# .gitignore
+
+# Ne pas versionner les fichiers de cache Angular
+.angular/cache/
+
 
 # === IDEs and editors ===
 .idea/
